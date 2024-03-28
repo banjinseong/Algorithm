@@ -19,7 +19,7 @@ class Solution {
                 }
             }
         }
-        Pos pos = dfs(x,y,board);
+        Pos pos = bfs(x,y,board);
         if(pos.count == 0){
             answer = -1;
         }else{
@@ -28,7 +28,7 @@ class Solution {
         return answer;
     }
     
-    public Pos dfs(int x, int y, String[] board){
+    public Pos bfs(int x, int y, String[] board){
         Pos clr = new Pos();
         Queue<Pos> que = new LinkedList<>();
         que.add(new Pos(x,y, 0));
